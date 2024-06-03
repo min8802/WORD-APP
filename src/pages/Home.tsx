@@ -19,7 +19,11 @@ const Home: FC = () => {
       </Text>
       <Flex flexDir="column" mt={8} gap={4} px={4}>
         {sampleData.map((v: IWords) => (
-            <Button key={v.day} variant="outline" colorScheme="blue" justifyContent="start" onClick={() => navigate(`/daily-word/${v.day}`)}>
+            <Button key={v.day} variant="outline" colorScheme="blue" justifyContent="start" onClick={() => navigate(`/daily-word/${v.day}`, {
+                state: {
+                    wordData : v,
+                }
+            })}>
                 Day {v.day} - {v.title}
             </Button>
         ))}
