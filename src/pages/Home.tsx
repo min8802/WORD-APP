@@ -1,7 +1,7 @@
 import { Button, Flex, Text } from "@chakra-ui/react";
 import { FC } from "react";
 import { useNavigate } from "react-router-dom"
-import sampleData from "../assets/sampleData.json";
+import sampleData from "../asset/sampleData.json";
 
 const Home: FC = () => {
   const navigate = useNavigate();
